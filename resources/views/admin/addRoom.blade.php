@@ -1,4 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming the CSS is saved in a file named styles.css -->
+</head>
+<link href="/css/admin.css" rel="stylesheet"/>
+<body>
     <div class="wrapper-admin">
         @if ($errors->any())
             <div>
@@ -12,33 +21,35 @@
         <form action="{{ route('room-store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <label for="">
-                Name
+            <label>
+                <span>Name</span>
                 <input type="text" name="name" value="{{ old('name') }}">
             </label>
-            <label for="">
-                Price
+            <label>
+                <span>Price</span>
                 <input type="number" name="price" value="{{ old('price') }}">
             </label>
 
-            <label for="">
-            Description
+            <label>
+                <span>Description</span>
                 <input type="text" name="description" value="{{ old('description') }}">
             </label>
 
-            <label for="">
-            Image
+            <label>
+                <span>Image</span>
                 <input type="file" name="img_url">
             </label>
-            <label for="">
-            Location
+            <label>
+                <span>Location</span>
                 <input type="text" name="location" value="{{ old('location') }}">
             </label>
-            <label for="">
-            Availability
+            <label>
+                <span>Availability</span>
                 <input type="number" name="availability" value="{{ old('availability') }}">
             </label>
 
             <button>Submit</button>
         </form>
     </div>
+</body>
+</html>

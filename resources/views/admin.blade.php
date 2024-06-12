@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+@include('navbar')
     gang gang!!!
     <a href="/add-room">create more bookings</a>
 </body>
 </html>
+ 

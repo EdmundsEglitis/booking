@@ -54,7 +54,6 @@ class AdminController extends Controller{
 
         $booking->save();
 
-        return back();
     }
 
 }
